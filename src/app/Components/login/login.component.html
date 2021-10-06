@@ -1,52 +1,20 @@
-<!-- <div class="container">
-    <h4 class="Email-head">Email Id</h4>
-    <mat-form-field appearance="outline" class="placewidth">
-        <mat-label>email-id</mat-label>
-        <input matInput placeholder=" Usermail">
-    </mat-form-field>
-
-    <h4 class="Password-head">Password</h4>
-    <mat-form-field appearance="outline" class="placewidth">
-        <mat-label>password</mat-label>
-        <input matInput placeholder="text">
-    </mat-form-field>
-
-    <div class="forgetPassword">
-        <h5 class="forget-head">Forget Password?</h5>
-    </div>
-
-    <div class="login-button">
-        <button type="submit" class="login-button-input" mat-flat-button color="warn">Login</button>
-    </div>
-
-    <div class = "text">
-        <mat-divider class = "divider"></mat-divider>
-        <span style="padding: 4px; font-weight: 500;"><h3>OR</h3></span>
-        <mat-divider class = "divider"></mat-divider>
-    </div>
-
-    <div class="alternateButton">
-        <button style="width: 48%" mat-flat-button color="primary">facebook</button>
-        <button style="width: 48%" mat-stroked-button>Google</button>
-    </div>
-</div> -->
 <div>
-    <form [formGroup] = "form" (ngSubmit)="submit()"  class="loginbox">
+    <form [formGroup] = "loginForm" (ngSubmit)="onSubmit()"  class="loginbox">
         <h4 class="Email-head">Email Id</h4>
-        <mat-form-field appearance="outline" class="placewidth">
+        <mat-form-field class="p-width" appearance="outline">
             <mat-label>email-id</mat-label>
             <input matInput placeholder="" formControlName="userName">
             <mat-error >User Name is required !</mat-error>
         </mat-form-field>
 
         <h4 class="Password-head">Password</h4>
-        <mat-form-field appearance="outline" class="placewidth">
+        <mat-form-field class="p-width" appearance="outline">
             <mat-label>password</mat-label>
             <input matInput [type]="hide ? 'password' : 'text'"formControlName="password">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
-            <mat-error >Password is required !</mat-error>
+            <mat-error >Password is required!!</mat-error>
         </mat-form-field>
 
         <div class="forgetPassword">
@@ -64,8 +32,8 @@
         </div>
 
         <div class="alternateButton">
-            <button style="width: 48%" mat-flat-button color="primary">facebook</button>
-            <button style="width: 48%" mat-stroked-button>Google</button>
+            <button  mat-flat-button class="a-button" color="primary">facebook</button>
+            <button  mat-stroked-button class="a-button">Google</button>
         </div>
     </form>
 </div>
