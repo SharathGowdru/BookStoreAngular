@@ -1,0 +1,32 @@
+<div class="bookdisplay">
+    <div *ngFor="let book of booksArray">
+        <div class=" bookcard ">
+            <div class="bookImg" routerLink="/bookdetail">
+                <img class="img" src="../../../assets/images/image1.png">
+            </div> 
+            <div class="descriptionblock ">
+                <h4 class="name" matTooltip="BookName" >{{book.bookName}}</h4>
+                <h5 class="description" matTooltip="description">{{book.description}}</h5>
+                <h5 class="author" matTooltip="Author">by {{book.author}}</h5>
+                <div class="quantityAndRate">
+                    <div class="rate">
+                        <p style="color: white;"> 4.5</p>
+                        <mat-icon class="star">grade</mat-icon>
+                    </div>
+                    <h5 style="color: #878787;">({{book.quantity}})</h5>
+                </div>
+                <div class="button">
+                    <button class="button-b" mat-raised-button (click)="addToCart(book)" matTooltip="Add-to-Cart">
+                        <mat-icon>add_shopping_cart</mat-icon>
+                    </button>
+                    <button class="button-w" mat-raised-button (click)="wishlist(book)" matTooltip="Add-to-wishlist">
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+<mat-paginator [length]="100" [pageSize]="10" aria-label="Select page"> </mat-paginator>
+
+
