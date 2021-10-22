@@ -1,0 +1,37 @@
+.cart{
+    border: 1px solid black;
+    width: 90%;
+    justify-content: center;
+    margin-left: 50px;
+}
+.cart-body{
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+}
+.sub-header{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.remove{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+h3{
+    font-weight: bold;
+}
+.length{
+    margin-left: 50px;
+}
+img{
+    width: 120px;
+}
+mat-paginator{
+    display: flex;
+    justify-content: center;
+}
